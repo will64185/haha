@@ -3,7 +3,7 @@
 from page.webpage import WebPage, sleep
 from common.readelement import Element
 
-search = Element('search')
+search = Element('pchs')
 
 
 class pchspage(WebPage):

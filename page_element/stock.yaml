@@ -1,0 +1,8 @@
+#库存管理-汇总库存
+库存管理: 'xpath==//*[@id="leftInner"]/ul/li[5]/div/div'
+库存查询: 'xpath==//*[@id="leftInner"]/ul/li[5]/ul/li[1]/div'
+内码输入: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[1]/div/div[3]/input'
+勾选显示零库存: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[1]/div/label/span/input'
+库存点击查询: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[1]/div/button[1]'
+库存数量: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr/td[10]/div/span'
+可售数量: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr/td[11]/div'

@@ -55,7 +55,7 @@ class allotpage(WebPage):
     def click_allotSkusearch(self):
         """点击配件查询"""
         self.is_click(allot['点击配件查询'])
-        sleep(3)
+        self.driver.implicitly_wait(10)
 
     def doubleclick_allotsku(self):
         """调拨申请双击配件"""

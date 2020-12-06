@@ -108,17 +108,28 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         send_report()
 
 
+# def _capture_screenshot():
+#     '''
+#     截图保存为base64
+#     '''
+#     now_time = dt_strftime("%Y%m%d%H%M%S")
+#     if not os.path.exists(cm.SCREENSHOT_DIR):
+#         os.makedirs(cm.SCREENSHOT_DIR)
+#     screen_path = os.path.join(cm.SCREENSHOT_DIR, "{}.png".format(now_time))
+#     driver.save_screenshot(screen_path)
+#     allure.attach.file(screen_path, "测试失败截图...{}".format(
+#         now_time), allure.attachment_type.PNG)
+#     with open(screen_path, 'rb') as f:
+#         imagebase64 = base64.b64encode(f.read())
+#     return imagebase64.decode()
+
 def _capture_screenshot():
-    '''
-    截图保存为base64
-    '''
-    now_time = dt_strftime("%Y%m%d%H%M%S")
-    if not os.path.exists(cm.SCREENSHOT_DIR):
-        os.makedirs(cm.SCREENSHOT_DIR)
-    screen_path = os.path.join(cm.SCREENSHOT_DIR, "{}.png".format(now_time))
-    driver.save_screenshot(screen_path)
-    allure.attach.file(screen_path, "测试失败截图...{}".format(
-        now_time), allure.attachment_type.PNG)
-    with open(screen_path, 'rb') as f:
+    """截图保存为base64"""
+    now_time, screen_file = cm.screen_path
+    driver.save_screenshot(screen_file)
+    allure.attach.file(screen_file,
+                       "失败截图{}".format(now_time),
+                       allure.attachment_type.PNG)
+    with open(screen_file, 'rb') as f:
         imagebase64 = base64.b64encode(f.read())
     return imagebase64.decode()

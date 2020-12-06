@@ -10,7 +10,7 @@ def send_report():
         content_html = f.read()
     try:
         mail = {
-            'from': '1084502012@qq.com',
+            'from': '641851519@qq.com',
             'subject': '最新的测试报告邮件',
             'content_html': content_html,
             'attachments': [cm.REPORT_FILE, ]

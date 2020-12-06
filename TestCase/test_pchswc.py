@@ -68,11 +68,18 @@ class TestPchswc:
         stock_outQty_after = StockPage.stock_outQty()
         a = int(stock_qty_after) - int(stock_qty_before)
         b = int(stock_outQty_after) - int(stock_outQty_before)
-        try:
-            assert '全部入库' in stastus and a == 5 and b == 5
+        # try:
+        #     assert ('全部入库1' in stastus and a == 5 and b == 5)
+        #     print('1，外采订单' + pchswcno, '已成功入库，入库数量5')
+        # except Exception as e:
+        #     print('1.外采订单，提交失败', format(e))
+        assert ('全部入库' in stastus and a == 5 and b == 5)
+        if '全部入库' in stastus and a == 5 and b == 5:
+
             print('1，外采订单' + pchswcno, '已成功入库，入库数量5')
-        except Exception as e:
-            print('1.外采订单，提交失败', format(e))
+        else:
+            print('1.外采订单，提交失败', )
+
 
 
 # if __name__ == '__main__':
