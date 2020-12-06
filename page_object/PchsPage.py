@@ -108,6 +108,7 @@ class pchspage(WebPage):
     def click_pchsgundong(self):
         """滚动计划单"""
         self.is_click(search['滚动计划单'])
+        sleep()
 
     def click_gdadd(self):
         """滚动新增"""
