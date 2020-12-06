@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-import re
 import pytest
 import allure
 from utils.logger import log
@@ -22,7 +21,7 @@ class TestAllot:
         LoginPage = Loginpage(drivers)
         LoginPage.get_url(ini.url)
 
-    @allure.story("调拨申请") 
+    @allure.story("调拨申请")
     @allure.title("调拨申请，门店向总部调拨，非紧俏品")
     def test_001(self, drivers):
         """调拨申请，门店向总部调拨，非紧俏品"""
@@ -68,5 +67,6 @@ class TestAllot:
 
 if __name__ == '__main__':
     import os
+
     pytest.main(['TestCase/test_pchswc.py', '--alluredir', './allure'])
     os.system('allure serve allure')

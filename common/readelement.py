@@ -26,5 +26,5 @@ class Element(object):
 
 
 if __name__ == '__main__':
-    search = Element('allot')
-    print(search['调拨管理'])
+    search = Element('pchs')
+    print(search['滚动保存'])

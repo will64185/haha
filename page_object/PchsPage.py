@@ -104,6 +104,87 @@ class pchspage(WebPage):
         self.is_click(search['配件内码导入'])
         sleep(2)
 
+    """滚动计划"""
+    def click_pchsgundong(self):
+        """滚动计划单"""
+        self.is_click(search['滚动计划单'])
+
+    def click_gdadd(self):
+        """滚动新增"""
+        self.is_click(search['滚动新增'])
+
+    def click_gdselectsp(self):
+        """滚动选择供应商"""
+        self.is_click(search['滚动选择供应商'])
+
+    def input_gdsupplier(self, content):
+        """滚动输入供应商"""
+        self.input_text(search['滚动输入供应商'], txt=content)
+
+    def click_gdsearch(self):
+        """滚动供应商查询"""
+        self.is_click(search['滚动供应商查询'])
+        sleep()
+
+    def doubleclick_gdgys(self):
+        """滚动双击选择供应商"""
+        self.is_doubleclick(search['滚动双击选择供应商'])
+        sleep()
+
+    def click_gdaddsku(self):
+        """滚动添加配件"""
+        self.is_click(search['滚动添加配件'])
+        sleep()
+
+    def input_gdsku(self, content):
+        """滚动输入内码"""
+        self.input_text(search['滚动输入内码'], txt=content)
+
+    def click_gdskusearch(self):
+        """滚动点击查询"""
+        self.is_click(search['滚动点击查询'])
+        sleep(2)
+
+    def doubleclick_gdsku(self):
+        """滚动双击内码"""
+        self.is_doubleclick(search['滚动双击内码'])
+
+    def input_gdnum(self, content):
+        """滚动输入采购数量"""
+        self.input_text(search['滚动输入采购数量'], txt=content)
+
+    def input_gdprice(self, content):
+        """滚动输入采购价格"""
+        self.input_text(search['滚动输入采购价格'], txt=content)
+
+    def click_gdskusure(self):
+        """滚动点击确定按钮"""
+        self.is_click(search['滚动点击确定按钮'])
+        sleep(1)
+
+    def click_gdskuclose(self):
+        """滚动关闭添加配件弹框"""
+        self.is_click(search['滚动关闭添加配件弹框'])
+
+    def click_gdsave(self):
+        """滚动保存"""
+        self.is_click(search['滚动保存'])
+        sleep()
+
+    def click_gdcommit(self):
+        """滚动提交"""
+        self.is_click(search['滚动提交'])
+        sleep(5)
+
+    def gdpchs_status(self):
+        """滚动计划单状态"""
+        gdpchs_status = self.element_text(search['滚动计划单状态'])
+        return gdpchs_status
+
+    def gdpchs_orderno(self):
+        """滚动计划单单号"""
+        gdpchs_orderno = self.element_text(search['滚动计划单单号'])
+        return gdpchs_orderno
 
 
 if __name__ == '__main__':

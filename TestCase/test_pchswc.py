@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-import re
 import pytest
 import allure
 from utils.logger import log
@@ -81,9 +80,6 @@ class TestPchswc:
             print('1.外采订单，提交失败', )
 
 
-
-# if __name__ == '__main__':
-#     pytest.main(['TestCase/test_pchswc.py'])
 if __name__ == '__main__':
     import os
     pytest.main(['TestCase/test_pchswc.py', '--alluredir', './allure'])
