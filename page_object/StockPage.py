@@ -32,15 +32,20 @@ class stockpage(WebPage):
 
     def stock_qty(self):
         """库存数量"""
-        # self.element_text(caigoupage['库存数量'])
         stock_qty = self.element_text(search['库存数量'])
         return stock_qty
 
     def stock_outQty(self):
         """可售数量"""
-        # self.element_text(caigoupage['可售数量'])
         stock_outQty = self.element_text(search['可售数量'])
         return stock_outQty
+
+    def stock_onRoadQty(self):
+        """合计在途库存"""
+        stock_outQty = self.element_text(search['合计在途库存'])
+        return stock_outQty
+
+
 
 
 if __name__ == '__main__':

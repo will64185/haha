@@ -3,6 +3,9 @@
 输入密码: 'xpath==//*[@id="app"]/div/div[2]/div/div/div/form/div[3]/div/div/input'
 登录按钮: 'xpath==//*[@id="app"]/div/div[2]/div/div/div/form/div[5]/div/button'
 
+当前登录公司: 'xpath==//*[@id="routes"]/div[2]/div[1]/div/div/div[3]/div/a[2]'
+当前登录人: 'xpath==//*[@id="routes"]/div[2]/div[1]/div/div/div[1]/div/div[1]/span[2]'
+退出登录: 'css==.user-avator-dropdown .ivu-dropdown-item:nth-child(2)'
 
 
 

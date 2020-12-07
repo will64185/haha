@@ -6,3 +6,5 @@
 库存点击查询: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[1]/div/button[1]'
 库存数量: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr/td[10]/div/span'
 可售数量: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr/td[11]/div'
+采购在途: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr/td[25]/div/span'
+合计在途库存: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr/td[27]/div/span'

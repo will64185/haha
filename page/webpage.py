@@ -83,6 +83,15 @@ class WebPage(object):
         except Exception as e:
             print(text + 'fail')
 
+    def mouse_stop(self, locator):
+        text = self.find_element(locator).text
+        mouse = self.find_element(locator)
+        try:
+            ActionChains(self.driver).move_to_element(mouse).perform()
+            log.info("鼠标悬停元素：\'%s\' {}".format(locator) % text)
+        except Exception as e:
+            print(text + 'fail')
+
     def get_title(self):
         """获取网页标题"""
         log.info("Current page title is %s" % self.driver.title)
@@ -110,8 +119,6 @@ class WebPage(object):
         log.info("获取文本{}".format(data))
         print(data.dict_data())
         return self.get_data
-
-
 
 
 if __name__ == "__main__":

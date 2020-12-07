@@ -104,7 +104,7 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         'total times': timestamp() - terminalreporter._sessionstarttime
     }
     print(result)
-    if result['failed'] or result['error']:
+    if result['faile1d'] or result['error']:
         send_report()
 
 

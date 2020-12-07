@@ -12,7 +12,7 @@ class pchspage(WebPage):
     def click_pchsguanli(self):
         """点击采购管理"""
         self.is_click(search['采购管理'])
-        sleep()
+        sleep(2)
 
     # 外采订单
     def click_pchswaicai(self):
@@ -186,6 +186,93 @@ class pchspage(WebPage):
         """滚动计划单单号"""
         gdpchs_orderno = self.element_text(search['滚动计划单单号'])
         return gdpchs_orderno
+
+    """计划采购订单"""
+    def click_pchsplan(self):
+        """计划采购订单"""
+        self.is_click(search['计划采购订单'])
+        sleep()
+
+    def click_planadd(self):
+        """计划新增"""
+        self.is_click(search['计划新增'])
+
+    def click_planselectsp(self):
+        """计划选择供应商"""
+        self.is_click(search['计划选择供应商'])
+
+    def input_plansupplier(self, content):
+        """计划输入供应商"""
+        self.input_text(search['计划输入供应商'], txt=content)
+
+    def click_plansearch(self):
+        """计划供应商查询"""
+        self.is_click(search['计划供应商查询'])
+        sleep()
+
+    def doubleclick_plangys(self):
+        """计划双击选择供应商"""
+        self.is_doubleclick(search['计划双击选择供应商'])
+        sleep()
+
+    def click_planaddsku(self):
+        """计划点击选择滚动计划单"""
+        self.is_click(search['计划点击选择滚动计划单'])
+        sleep()
+
+    def input_plansku(self, content):
+        """计划输入滚动计划单"""
+        self.input_text(search['计划输入滚动计划单'], txt=content)
+
+    def click_planskusearch(self):
+        """计划查询滚动计划单"""
+        self.is_click(search['计划查询滚动计划单'])
+        sleep()
+
+    def click_planselectgd(self):
+        """计划选择滚动计划单"""
+        self.is_click(search['计划选择滚动计划单'])
+        sleep()
+
+    def click_planselect(self):
+        """计划点击选择"""
+        self.is_click(search['计划点击选择'])
+        sleep()
+
+    def click_planskuNum(self):
+        """点击采购数量"""
+        self.is_click(search['计划数量'])
+        sleep()
+
+    def input_planskuNum(self, content):
+        """修改采购数量"""
+        self.input_text(search['修改采购数量'], txt=content)
+
+    def click_plansave(self):
+        """计划保存"""
+        self.is_click(search['计划保存'])
+        sleep()
+
+    def click_plancommit(self):
+        """计划提交"""
+        self.is_click(search['计划提交'])
+        sleep()
+
+    def click_plancommitsure(self):
+        """计划提交确定"""
+        self.is_click(search['计划提交确定'])
+        sleep(5)
+
+    def planpchs_status(self):
+        """计划状态"""
+        gdpchs_status = self.element_text(search['计划状态'])
+        return gdpchs_status
+
+    def planpchs_orderno(self):
+        """计划单号"""
+        gdpchs_orderno = self.element_text(search['计划单号'])
+        return gdpchs_orderno
+
 
 
 if __name__ == '__main__':

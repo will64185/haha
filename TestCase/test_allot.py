@@ -18,8 +18,8 @@ class TestAllot:
     @pytest.fixture(scope='function', autouse=True)
     def open_oms(self, drivers):
         """oms2.0,进入采购管理"""
-        LoginPage = Loginpage(drivers)
-        LoginPage.get_url(ini.url)
+        # LoginPage = Loginpage(drivers)
+        # LoginPage.get_url(ini.url)
 
     @allure.story("调拨申请")
     @allure.title("调拨申请，门店向总部调拨，非紧俏品")
