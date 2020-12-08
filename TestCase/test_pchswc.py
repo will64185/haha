@@ -21,16 +21,16 @@ class TestPchswc:
 
     @allure.story("外采订单")
     @allure.title("外采订单，添加配件")
-    def test_003(self, drivers):
+    def test_001(self, drivers):
         """外采订单，添加配件"""
         PchsPage = pchspage(drivers)
         StockPage = stockpage(drivers)
         LoginPage = Loginpage(drivers)
         a = LoginPage.login_name()
-        if a != "东方店简称":
+        if a != "JP 005-虹梅南路店":
             LoginPage.mouse_stop1()
             LoginPage.click_loginOut()
-            LoginPage.input_username("dfd")
+            LoginPage.input_username("h1")
             LoginPage.input_password("123456")
             LoginPage.click_loginButton()
             a = LoginPage.get_title()

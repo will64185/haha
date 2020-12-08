@@ -28,7 +28,7 @@ class TestAllot:
         AllotPage = allotpage(drivers)
         StockPage = stockpage(drivers)
         LoginPage = Loginpage(drivers)
-        LoginPage.input_username("dfd")
+        LoginPage.input_username("h1")
         LoginPage.input_password("123456")
         LoginPage.click_loginButton()
         a = LoginPage.get_title()

@@ -80,13 +80,13 @@ class TestPchsplan:
             PchsPage.click_pchsplan()
             PchsPage.click_planadd()
             PchsPage.click_planselectsp()
-            PchsPage.input_plansupplier("上海测试有限公司2")
-            PchsPage.click_plansearch()
-            PchsPage.doubleclick_plangys()
+            PchsPage.input_plansupplier1("上海测试有限公司2")
+            PchsPage.click_plansearch1()
+            PchsPage.doubleclick_plangys1()
             PchsPage.click_planaddsku()
             PchsPage.input_plansku(gdorderno)
             PchsPage.click_planskusearch()
-            PchsPage.click_planselectgd()
+            PchsPage.click_planselectgd1()
             PchsPage.click_planselect()
             # PchsPage.click_planskuNum()
             # PchsPage.input_planskuNum('4')
@@ -108,13 +108,13 @@ class TestPchsplan:
             OnRoadQty1 = StockPage.stock_onRoadQty()
             roadQty = int(OnRoadQty1) - int(OnRoadQty)
             assert ('待收货' in planStatus and roadQty == 5)
-            if '已审批' in planStatus:
+            if '待收货' in planStatus:
 
                 print('1，计划采购订单' + planOrderNo, "已成功提交")
             else:
                 print('1.计划采购订单，提交失败', )
         else:
-            PchsPage.click_pchsguanli()
+            # PchsPage.click_pchsguanli()
             PchsPage.click_pchsgundong()
             gdorderno = PchsPage.gdpchs_orderno()
             PchsPage.click_pchsplan()

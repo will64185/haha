@@ -105,6 +105,7 @@ class pchspage(WebPage):
         sleep(2)
 
     """滚动计划"""
+
     def click_pchsgundong(self):
         """滚动计划单"""
         self.is_click(search['滚动计划单'])
@@ -188,6 +189,7 @@ class pchspage(WebPage):
         return gdpchs_orderno
 
     """计划采购订单"""
+
     def click_pchsplan(self):
         """计划采购订单"""
         self.is_click(search['计划采购订单'])
@@ -215,6 +217,24 @@ class pchspage(WebPage):
         self.is_doubleclick(search['计划双击选择供应商'])
         sleep()
 
+    #####################
+
+    def input_plansupplier1(self, content):
+        """计划输入供应商"""
+        self.input_text(search['计划输入供应商1'], txt=content)
+
+    def click_plansearch1(self):
+        """计划供应商查询"""
+        self.is_click(search['计划供应商查询1'])
+        sleep()
+
+    def doubleclick_plangys1(self):
+        """计划双击选择供应商"""
+        self.is_doubleclick(search['计划双击选择供应商1'])
+        sleep()
+
+    #####################
+
     def click_planaddsku(self):
         """计划点击选择滚动计划单"""
         self.is_click(search['计划点击选择滚动计划单'])
@@ -232,6 +252,11 @@ class pchspage(WebPage):
     def click_planselectgd(self):
         """计划选择滚动计划单"""
         self.is_click(search['计划选择滚动计划单'])
+        sleep()
+
+    def click_planselectgd1(self):
+        """计划选择滚动计划单"""
+        self.is_click(search['计划选择滚动计划单1'])
         sleep()
 
     def click_planselect(self):
@@ -272,7 +297,6 @@ class pchspage(WebPage):
         """计划单号"""
         gdpchs_orderno = self.element_text(search['计划单号'])
         return gdpchs_orderno
-
 
 
 if __name__ == '__main__':
