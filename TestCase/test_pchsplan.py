@@ -20,6 +20,8 @@ class TestPchsplan:
 
     @allure.story("滚动计划")
     @allure.title("滚动计划，添加配件")
+    @pytest.mark.dependency(name="a")
+    @pytest.mark.run(order=1)
     def test_001(self, drivers):
         """滚动计划，添加配件"""
         PchsPage = pchspage(drivers)
@@ -59,6 +61,8 @@ class TestPchsplan:
 
     @allure.story("计划采购订单")
     @allure.title("计划采购订单")
+    @pytest.mark.dependency(depends=['a'])
+    @pytest.mark.run(order=2)
     def test_002(self, drivers):
         """滚动计划，添加配件"""
         PchsPage = pchspage(drivers)

@@ -188,6 +188,39 @@ class pchspage(WebPage):
         gdpchs_orderno = self.element_text(search['滚动计划单单号'])
         return gdpchs_orderno
 
+    def click_gdselectfirst(self):
+        """滚动选中第一个滚动计划单"""
+        self.is_click(search['滚动选中第一个滚动计划单'])
+
+    def gdpchs_orderquxiaonum(self):
+        """滚动获取计划取消数量"""
+        gdpchs_orderquxiaonum = self.element_text(search['滚动获取计划取消数量'])
+        return gdpchs_orderquxiaonum
+
+    def click_gdtiaozheng(self):
+        """滚动计划调整"""
+        self.is_click(search['滚动计划调整'])
+        sleep()
+
+    def click_gdquxiaonum(self):
+        """滚动点击本次调整数量"""
+        self.is_click(search['滚动点击本次调整数量'])
+        sleep()
+
+    def input_gdquxiaonum(self, content):
+        """滚动点击本次调整数量"""
+        self.input_text(search['滚动点击本次调整数量'], txt=content)
+
+    def click_gdtzsave(self):
+        """滚动调整数量保存"""
+        self.is_click(search['滚动调整数量保存'])
+        sleep()
+
+    def click_gdtzchose(self):
+        """滚动点击取消数量"""
+        self.is_click(search['滚动点击取消数量'])
+        sleep()
+
     """计划采购订单"""
 
     def click_pchsplan(self):

@@ -6,14 +6,14 @@
 调拨申请选择调出方: 'css==.iconxuanzetichengchengyuanicon'
 调拨申请输入调出方: 'css==.w250 > .el-input__inner'
 调拨申请点击查询: 'css==.partCheck-hd > .mr10:nth-child(2) > span'
-调拨申请双击调出方: 'xpath==/html/body/div[31]/div[2]/div/div/div[2]/div[2]/div/div/div[1]/div[2]/table/tbody/tr/td[2]/div/div/div/span'
+调拨申请双击调出方: 'xpath==/html/body/div[32]/div[2]/div/div/div[2]/div[2]/div/div/div[1]/div[2]/table/tbody/tr/td[2]/div/div/div/span'  # 31
 调拨申请点击添加配件: 'css==.fl:nth-child(1) > .mr10 > span'
 调拨申请输入配件: 'css==.db:nth-child(2) .el-input__inner'
 点击配件查询: 'css==.partCheck-hd > .ivu-btn-primary:nth-child(5) > span'
 调拨申请双击配件: 'xpath==//div[2]/div/div/div/div[2]/table/tbody/tr/td[3]/div/span'
 输入调拨数量: 'css==.vxe-input--inner'
-输入数量点击确定: 'xpath==/html/body/div[25]/div[2]/div/div/div[3]/div/button[1]'
-关闭添加配件弹框: 'xpath==/html/body/div[19]/div[2]/div/div/div[2]/div[1]/button[3]'
+输入数量点击确定: 'xpath==/html/body/div[26]/div[2]/div/div/div[3]/div/button[1]'  # 25
+关闭添加配件弹框: 'xpath==/html/body/div[20]/div[2]/div/div/div[2]/div[1]/button[3]' # 19
 调拨申请点击保存: 'css==.db:nth-child(4) > .mr10 > span'
 调拨申请编辑收货信息: 'css==.fl:nth-child(5) span'
 选择配送方式: 'css==.ivu-select-placeholder'
