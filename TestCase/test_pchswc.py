@@ -16,17 +16,16 @@ class TestPchswc:
     @pytest.fixture(scope='function', autouse=True)
     def open_oms(self, drivers):
         """oms2.0,进入采购管理"""
-        LoginPage = Loginpage(drivers)
-        LoginPage.input_username("h1")
-        LoginPage.input_password("123456")
-        LoginPage.click_loginButton()
-        a = LoginPage.get_title()
-        log.info(a)
-        assert ("极配OMS系统" in a)
+        # LoginPage = Loginpage(drivers)
+        # LoginPage.input_username("h1")
+        # LoginPage.input_password("123456")
+        # LoginPage.click_loginButton()
+        # a = LoginPage.get_title()
+        # log.info(a)
+        # assert ("极配OMS系统" in a)
 
     @allure.story("外采订单")
     @allure.title("外采订单，添加配件")
-    @pytest.mark.run(order=4)
     def test_003(self, drivers):
         """外采订单，添加配件"""
         PchsPage = pchspage(drivers)
@@ -48,8 +47,6 @@ class TestPchswc:
             PchsPage.click_wcselectsp()
             PchsPage.input_supplier('上海测试有限公司2')
             PchsPage.click_wcsearch()
-            sleep(3600)
-
             PchsPage.doubleclick_wcgys()
             PchsPage.click_waaddsku()
             PchsPage.input_wcsku('05001221')

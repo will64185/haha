@@ -4,7 +4,7 @@
 新增按钮: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section[1]/div/div/div[4]/button'
 选择供应商按钮: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section[2]/div/div/div/div/div[3]/div/div[2]/form/div[1]/div/div/div[2]/button'
 输入供应商弹框: 'xpath==(//input[@type="text"])[20]'
-查询供应商按钮: 'css==.v-transfer-dom:nth-child(23) .ivu-btn-primary'
+查询供应商按钮: 'xpath==/html/body/div[18]/div[2]/div/div/div[2]/div[1]/button[1]'
 双击选择供应商: 'xpath==/html/body/div[18]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div[2]/table/tbody/tr/td[2]/div/div/div/span'
 点击添加添加配件: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section[2]/div/div/div/div/div[3]/div/div[3]/div/div[1]/button'
 输入内码: 'xpath==/html/body/div[31]/div/div/div/div[2]/div[1]/div[2]/div/input'
@@ -72,5 +72,7 @@
 计划提交确定: 'css==.ivu-modal-confirm-footer > .ivu-btn-primary > span'
 计划状态: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[2]/div/span'
 计划单号: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[4]/div/span'
-
+计划更多: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section[1]/div/div/div[3]/button'
+计划输入订单编号: 'xpath==/html/body/div[33]/div[2]/div/div/div[2]/form/div[3]/div/div/input'
+计划更多确定: 'xpath==/html/body/div[33]/div[2]/div/div/div[3]/div/button[1]'
 

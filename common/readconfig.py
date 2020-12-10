@@ -4,7 +4,7 @@ import configparser
 from config.conf import cm
 
 HOST = 'HOST'
-
+WMS = 'WMS'
 
 class ReadConfig(object):
     """配置文件"""
@@ -27,8 +27,12 @@ class ReadConfig(object):
     def url(self):
         return self._get(HOST, HOST)
 
+    @property
+    def wms_url(self):
+        return self._get(HOST, WMS)
+
 
 ini = ReadConfig()
 
 if __name__ == '__main__':
-    print(ini.url)
+    print(ini.wms_url)

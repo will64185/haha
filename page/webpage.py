@@ -35,6 +35,17 @@ class WebPage(object):
         except TimeoutException:
             raise TimeoutException("打开%s超时请检查网络或网址服务器" % url)
 
+    def open_newPage(self, url):
+        """打开新的页面"""
+        js = "window.open(" + '"' + url + '"' + ")"  # 打开wms
+        try:
+            self.driver.execute_script(js)
+            window = self.driver.window_handles
+            self.driver.switch_to.window(window[-1])
+            log.info("打开网页：%s" % url)
+        except TimeoutException:
+            raise TimeoutException("打开%s超时请检查网络或网址服务器" % url)
+
     @staticmethod
     def element_locator(func, locator):
         """元素定位器"""
@@ -119,6 +130,20 @@ class WebPage(object):
         log.info("获取文本{}".format(data))
         print(data.dict_data())
         return self.get_data
+
+    def skip_first(self):
+        window = self.driver.window_handles
+        self.driver.switch_to.window(window[-0])
+        sleep(2)
+        log.info("打开网页" + self.driver.title)
+
+    def skip_second(self):
+        window = self.driver.window_handles
+        self.driver.switch_to.window(window[-1])
+        sleep(2)
+        log.info("打开网页" + self.driver.title)
+
+
 
 
 if __name__ == "__main__":

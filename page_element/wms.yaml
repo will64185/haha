@@ -1,0 +1,40 @@
+# 登录页
+wms用户名: 'css==.ivu-form-item:nth-child(1) .ivu-input'
+wms密码: 'css==.mb0 .ivu-input'
+wms登录: 'css==.login-con-submit'
+# 系统管理
+wms系统管理: 'css==.ivu-menu-submenu:nth-child(6) > .ivu-menu-submenu-title span:nth-child(2)'
+# 系统设置
+wms系统设置: 'css==.ivu-menu-opened .ivu-menu-item:nth-child(5) span:nth-child(2)'
+wms默认仓: 'xpath==//*[@id="right-content"]/div/section/div[2]/div/div/div[1]/div/span'
+wms选择默认仓库: 'xpath==.//*[@id="right-content"]/div/section/div[2]/div/div/div[2]/ul[2]/li[2]'
+# 入库管理
+wms入库管理: 'css==.ivu-menu-submenu:nth-child(2) > .ivu-menu-submenu-title > .l_inner'
+# 入库任务
+wms入库任务: 'css==.ivu-menu-opened .ivu-menu-item:nth-child(1) span:nth-child(2)'
+#wms选择订单类型: 'css==.ivu-select-selection-focused .ivu-select-selected-value'
+#wms选择采购入库: 'css==.ivu-select-visible .ivu-select-item:nth-child(1)'
+wms选择查询条件: 'xpath==//*[@id="right-content"]/div/section[1]/div[1]/div/div[6]/div[1]/div[1]/div/span'
+wms选择业务单号: 'xpath==//*[@id="right-content"]/div/section[1]/div[1]/div/div[6]/div[1]/div[2]/ul[2]/li[2]'
+wms输入业务单号: 'xpath==//*[@id="right-content"]/div/section[1]/div[1]/div/div[6]/div[2]/input'
+wms入库任务查询: 'xpath==//*[@id="right-content"]/div/section[1]/div[1]/div/div[6]/button'
+wms选择入库单号: 'xpath==//*[@id="right-content"]/div/section[2]/div/div/div[2]/table/tbody/tr/td[2]/div/label/span/input'
+wms点击批量收货: 'xpath==//*[@id="right-content"]/div/section[1]/div[2]/button[2]'
+wms获取入库单号: 'xpath==//td[3]/div/a'
+# 收货管理
+wms收货管理: 'xpath==//*[@id="leftInner"]/ul/li[2]/ul/li[2]/div'
+wms收货管理选择单据: 'xpath==//*[@id="right-content"]/div/section[2]/div/div/div[2]/table/tbody/tr[1]/td[2]/div/label/span/input'
+wms点击确认到货: 'xpath==//*[@id="right-content"]/div/section[1]/div[2]/button[1]'
+wms确认到货确定: 'xpath==/html/body/div[8]/div[2]/div/div/div[3]/button[2]'
+wms点击收货单号: 'xpath==//*[@id="right-content"]/div/section[2]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/a'
+wms点击一键收货: 'xpath==//*[@id="right-content"]/div/section[2]/div[1]/button[2]'
+wms点击确定: 'xpath==/html/body/div[13]/div[2]/div/div/div/div/div[3]/button[2]'
+wms点击收货完成: 'xpath==//*[@id="right-content"]/div/section[1]/div[2]/div/div[1]/button[2]'
+wms点击确定1: 'xpath==/html/body/div[13]/div[2]/div/div/div/div/div[3]/button[2]'
+wms点击生成上架单: 'xpath==//*[@id="right-content"]/div/section[1]/div[2]/div/div[1]/button[3]'
+wms点击上架管理: 'xpath==//*[@id="leftInner"]/ul/li[2]/ul/li[3]/div'
+wms点击上架单号: 'xpath==//*[@id="right-content"]/div/section[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/a'
+wms点击上架完成: 'xpath==//*[@id="right-content"]/div/section[1]/div[2]/div/div[1]/button[1]'
+WMS确认上架确定: 'xpath==/html/body/div[11]/div[2]/div/div/div/div/div[3]/button[2]'
+WMS入库单状态: 'xpath==//*[@id="right-content"]/div/section[2]/div/div/div[2]/table/tbody/tr/td[8]/div/span'
+

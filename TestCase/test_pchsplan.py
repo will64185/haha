@@ -8,6 +8,7 @@ from page_object.LoginPage import Loginpage
 from page_object.PchsPage import pchspage
 from page_object.StockPage import stockpage
 from utils.times import sleep
+from page_object.WMSPage import wmspage
 
 
 @allure.feature("采购管理")
@@ -19,7 +20,7 @@ class TestPchsplan:
         # LoginPage.get_url(ini.url)
 
     @allure.story("滚动计划")
-    @allure.title("滚动计划，添加配件")
+    @allure.title("滚动计划-添加配件新增滚动计划")
     @pytest.mark.dependency(name="a")
     @pytest.mark.run(order=1)
     def test_001(self, drivers):
@@ -60,11 +61,11 @@ class TestPchsplan:
             print('1.滚动计划单，提交失败', )
 
     @allure.story("计划采购订单")
-    @allure.title("计划采购订单")
+    @allure.title("计划采购订单-选择滚动计划并提交")
     @pytest.mark.dependency(depends=['a'])
     @pytest.mark.run(order=2)
     def test_002(self, drivers):
-        """滚动计划，添加配件"""
+        """计划采购订单，新增，选择滚动计划并提交"""
         PchsPage = pchspage(drivers)
         StockPage = stockpage(drivers)
         LoginPage = Loginpage(drivers)
@@ -146,7 +147,6 @@ class TestPchsplan:
             PchsPage.click_plancommit()
             PchsPage.click_plancommitsure()
             planStatus = PchsPage.planpchs_status()
-            print(planStatus)
             planOrderNo = PchsPage.planpchs_orderno()
             StockPage.click_stcoksearch()
             StockPage.click_stcoksearch1()
@@ -158,6 +158,77 @@ class TestPchsplan:
                 print('1，计划采购订单' + planOrderNo, "已成功提交")
             else:
                 print('1.计划采购订单，提交失败', )
+
+    @allure.story("计划采购订单")
+    @allure.title("计划采购订单-WMS入库")
+    @pytest.mark.dependency(depends=['b'])
+    @pytest.mark.run(order=3)
+    def test_003(self, drivers):
+        """计划采购订单，WMS入库并回传oms"""
+        PchsPage = pchspage(drivers)
+        StockPage = stockpage(drivers)
+        WMSPage = wmspage(drivers)
+        PchsPage.click_pchsplan()
+        planOrderNo = PchsPage.planpchs_orderno()
+        StockPage.open_newPage(ini.wms_url)
+        WMSPage.input_username("zw1")
+        WMSPage.input_password("123456")
+        WMSPage.click_loginButton()
+        WMSPage.click_system()
+        WMSPage.click_systemSet()
+        WMSPage.click_systemStore()
+        WMSPage.click_systemDefaultStore()
+        WMSPage.click_enterManager()
+        WMSPage.click_enterTask()
+        WMSPage.click_select()
+        WMSPage.click_yewuNo()
+        WMSPage.input_yewuNo(planOrderNo)
+        WMSPage.click_enterTaskSearch()
+        WMSPage.click_selectEnterNo()
+        WMSPage.click_BatchReceiving()
+        enterNo = WMSPage.obtain_enterNo()
+        WMSPage.click_receivingManager()
+        WMSPage.click_receivingSelectNo()
+        WMSPage.click_confirmArrival()
+        WMSPage.click_confirmArrivalSure()
+        WMSPage.click_receivingNo()
+        WMSPage.click_receivingOneKey()
+        WMSPage.click_receivingSure()
+        WMSPage.click_receivingOver()
+        WMSPage.click_receivingSure1()
+        WMSPage.click_shangjiaOrder()
+        WMSPage.click_shangjiaManager()
+        WMSPage.skip_first()
+        StockPage.click_stcoksearch()
+        StockPage.click_stcoksearch1()
+        stock_qty_before = StockPage.stock_qty()
+        stock_outQty_before = StockPage.stock_outQty()
+        stock_OnRoadQty_before = StockPage.stock_onRoadQty()
+        WMSPage.skip_second()
+        WMSPage.click_shangjiaNo()
+        WMSPage.click_shangjiaOver()
+        WMSPage.click_shangjiaOverSure()
+        WMSPage.click_enterTask()
+        ruku_status = WMSPage.ruku_status()
+        WMSPage.skip_first()
+        StockPage.click_stcoksearch()
+        StockPage.click_stcoksearch1()
+        stock_qty_after = StockPage.stock_qty()
+        stock_outQty_after = StockPage.stock_outQty()
+        stock_OnRoadQty_after = StockPage.stock_onRoadQty()
+        PchsPage.click_pchsplan()
+        PchsPage.click_planMore()
+        PchsPage.input_planOrder(planOrderNo)
+        PchsPage.click_moreSure()
+        planStatus = PchsPage.planpchs_status()
+        qty = int(stock_qty_after) - int(stock_qty_before)
+        outQty = int(stock_outQty_after) - int(stock_outQty_before)
+        OnRoadQty = int(stock_OnRoadQty_before) - int(stock_OnRoadQty_after)
+        assert ('全部入库' in planStatus and qty == 5 and outQty == 5 and OnRoadQty == 5)
+        if '全部入库' in planStatus:
+            print('1，计划采购订单' + planOrderNo, "wms回传成功，状态为" + planStatus )
+        else:
+            print('1.计划采购订单，回传失败', )
 
 
 if __name__ == '__main__':

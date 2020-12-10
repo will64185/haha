@@ -23,7 +23,6 @@ class TestAllot:
 
     @allure.story("调拨申请")
     @allure.title("调拨申请，门店向总部调拨，非紧俏品")
-    @pytest.mark.run(order=3)
     def test_001(self, drivers):
         """调拨申请，门店向总部调拨，非紧俏品"""
         AllotPage = allotpage(drivers)

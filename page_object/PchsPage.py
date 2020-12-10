@@ -109,7 +109,7 @@ class pchspage(WebPage):
     def click_pchsgundong(self):
         """滚动计划单"""
         self.is_click(search['滚动计划单'])
-        sleep()
+        self.driver.implicitly_wait(10)
 
     def click_gdadd(self):
         """滚动新增"""
@@ -226,7 +226,7 @@ class pchspage(WebPage):
     def click_pchsplan(self):
         """计划采购订单"""
         self.is_click(search['计划采购订单'])
-        sleep()
+        self.driver.implicitly_wait(10)
 
     def click_planadd(self):
         """计划新增"""
@@ -248,7 +248,7 @@ class pchspage(WebPage):
     def doubleclick_plangys(self):
         """计划双击选择供应商"""
         self.is_doubleclick(search['计划双击选择供应商'])
-        sleep()
+        sleep(2)
 
     #####################
 
@@ -330,6 +330,21 @@ class pchspage(WebPage):
         """计划单号"""
         gdpchs_orderno = self.element_text(search['计划单号'])
         return gdpchs_orderno
+
+    def click_planMore(self):
+        """计划更多"""
+        self.is_click(search['计划更多'])
+
+    def input_planOrder(self, content):
+        """计划输入订单编号"""
+        self.input_text(search['计划输入订单编号'], txt=content)
+
+    def click_moreSure(self):
+        """计划更多确定"""
+        self.is_click(search['计划更多确定'])
+        sleep()
+
+
 
 
 if __name__ == '__main__':
