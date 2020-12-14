@@ -39,6 +39,7 @@ class pchspage(WebPage):
     def doubleclick_wcgys(self):
         """双击选择供应商"""
         self.is_doubleclick(search['双击选择供应商'])
+        sleep(2)
 
     def click_waaddsku(self):
         """点击添加配件"""
@@ -226,8 +227,7 @@ class pchspage(WebPage):
     def click_pchsplan(self):
         """计划采购订单"""
         self.is_click(search['计划采购订单'])
-        self.driver.implicitly_wait(10)
-
+        sleep(3)
     def click_planadd(self):
         """计划新增"""
         self.is_click(search['计划新增'])
@@ -343,6 +343,117 @@ class pchspage(WebPage):
         """计划更多确定"""
         self.is_click(search['计划更多确定'])
         sleep()
+
+# 临时采购订单
+    def click_pchsls(self):
+        """临时采购订单"""
+        self.is_click(search['临时采购订单'])
+        sleep(3)
+
+    def click_lsAdd(self):
+        """临时新增按钮"""
+        self.is_click(search['临时新增按钮'])
+
+    def click_lsselectsp(self):
+        """临时选择供应商按钮"""
+        self.is_click(search['临时选择供应商按钮'])
+
+    def input_lssupplier(self, content):
+        """临时输入供应商弹框"""
+        self.input_text(search['临时输入供应商弹框'], txt=content)
+
+    def click_lssearch(self):
+        """临时查询供应商按钮"""
+        self.is_click(search['临时查询供应商按钮'])
+
+    def doubleclick_lsgys(self):
+        """临时双击选择供应商"""
+        self.is_doubleclick(search['临时双击选择供应商'])
+        sleep(2)
+
+    def click_lswaaddsku(self):
+        """临时点击添加添加配件"""
+        self.is_click(search['临时点击添加添加配件'])
+
+    def input_lssku(self, content):
+        """临时输入内码"""
+        self.input_text(search['临时输入内码'], txt=content)
+
+    def click_lsskusearch(self):
+        """临时点击查询"""
+        self.is_click(search['临时点击查询'])
+
+    def doubleclick_lssku(self):
+        """临时双击内码"""
+        self.is_doubleclick(search['临时双击内码'])
+
+    def input_lsnum(self, content):
+        """临时输入数量"""
+        self.input_text(search['临时输入数量'], txt=content)
+
+    def input_lsprice(self, content):
+        """临时输入采购价格"""
+        self.input_text(search['临时输入采购价格'], txt=content)
+
+    def click_lsskusure(self):
+        """临时点击确定按钮"""
+        self.is_click(search['临时点击确定按钮'])
+
+    def click_lsskuclose(self):
+        """临时关闭添加配件弹框"""
+        self.is_click(search['临时关闭添加配件弹框'])
+
+    def click_lssave(self):
+        """临时保存"""
+        self.is_click(search['临时保存'])
+
+    def click_lscommit(self):
+        """临时提交并入库"""
+        self.is_click(search['临时提交并入库'])
+
+    def click_lscommitsure(self):
+        """临时提交确定"""
+        self.is_click(search['临时提交确定'])
+        sleep(3)
+
+    def lspchs_status(self):
+        """临时外采订单状态"""
+        wcpchs_status = self.element_text(search['临时外采订单状态'])
+        return wcpchs_status
+
+    def lspchs_orderno(self):
+        """临时外采单号"""
+        wcpchs_orderno = self.element_text(search['临时外采单号'])
+        return wcpchs_orderno
+
+    def click_lsMore(self):
+        """临时更多"""
+        self.is_click(search['临时更多'])
+
+    def input_lsOrder(self, content):
+        """临时输入订单编号"""
+        self.input_text(search['临时输入订单编号'], txt=content)
+
+    def click_lsSure(self):
+        """临时更多确定"""
+        self.is_click(search['临时更多确定'])
+        sleep()
+
+    def lspchs_cancelNum(self):
+        """临时取消数量"""
+        lspchs_cancelNum = self.element_text(search['临时取消数量'])
+        return lspchs_cancelNum
+
+    def lspchs_checkNum(self):
+        """临时验收数量"""
+        lspchs_checkNum = self.element_text(search['临时验收数量'])
+        return lspchs_checkNum
+
+
+
+
+
+
 
 
 

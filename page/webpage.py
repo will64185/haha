@@ -12,6 +12,7 @@ from config.conf import cm
 from utils.times import sleep
 from utils.logger import log
 from common.read_excel import ReadExcel
+from selenium import webdriver
 import os
 
 
@@ -19,7 +20,6 @@ class WebPage(object):
     """selenium基类"""
 
     def __init__(self, driver):
-        # self.driver = webdriver.Chrome()
         self.driver = driver
         self.timeout = 20
         self.wait = WebDriverWait(self.driver, self.timeout)
@@ -143,7 +143,8 @@ class WebPage(object):
         sleep(2)
         log.info("打开网页" + self.driver.title)
 
-
+    def close_web(self):
+        self.driver.quit()
 
 
 if __name__ == "__main__":

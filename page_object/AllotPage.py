@@ -77,7 +77,7 @@ class allotpage(WebPage):
     def click_allotsave(self):
         """调拨申请点击保存"""
         self.is_click(allot['调拨申请点击保存'])
-        sleep(2)
+        sleep(3)
 
     def click_allotadress(self):
         """调拨申请编辑收货信息"""
@@ -115,13 +115,33 @@ class allotpage(WebPage):
         stock_outQty = self.element_text(allot['调拨申请单号'])
         return stock_outQty
 
+    def click_allotOut(self):
+        """调出调拨出库"""
+        self.is_click(allot['调出调拨出库'])
+        sleep(3)
 
+    def click_allotOutMore(self):
+        """调出更多"""
+        self.is_click(allot['调出更多'])
 
+    def input_allotApplyOn(self, content):
+        """调出输入受理单号"""
+        self.input_text(allot['调出输入受理单号'], txt=content)
 
+    def click_allotOutMoreSUre(self):
+        """调出更多确定"""
+        self.is_click(allot['调出更多确定'])
+        sleep(2)
 
+    def allot_allotStatus(self):
+        """调出获取状态"""
+        allot_allotStatus = self.element_text(allot['调出获取状态'])
+        return allot_allotStatus
 
-
-
+    def allot_outOrderOn(self):
+        """调出获取单号"""
+        allot_outOrderOn = self.element_text(allot['调出获取单号'])
+        return allot_outOrderOn
 
 if __name__ == '__main__':
     pass

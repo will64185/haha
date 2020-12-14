@@ -10,7 +10,7 @@
 调拨申请点击添加配件: 'css==.fl:nth-child(1) > .mr10 > span'
 调拨申请输入配件: 'css==.db:nth-child(2) .el-input__inner'
 点击配件查询: 'css==.partCheck-hd > .ivu-btn-primary:nth-child(5) > span'
-调拨申请双击配件: 'xpath==//div[2]/div/div/div/div[2]/table/tbody/tr/td[3]/div/span'
+调拨申请双击配件: 'xpath==/html/body/div[20]/div[2]/div/div/div[2]/div[2]/div/div/div[1]/div[2]/table/tbody/tr/td[2]/div/label/span/input'
 输入调拨数量: 'css==.vxe-input--inner'
 输入数量点击确定: 'xpath==/html/body/div[26]/div[2]/div/div/div[3]/div/button[1]'  # 25
 关闭添加配件弹框: 'xpath==/html/body/div[20]/div[2]/div/div/div[2]/div[1]/button[3]' # 19
@@ -23,3 +23,10 @@
 调拨申请提交确定: 'css==.ivu-modal-confirm-footer > .ivu-btn-primary > span'
 调拨申请单状态: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[2]/div/span'
 调拨申请单号: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[6]/div/span'
+# 调拨出库
+调出调拨出库: 'xpath==//*[@id="leftInner"]/ul/li[4]/ul/li[1]/ul/li[3]/div'
+调出更多: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[1]/div/div/div[2]/button'
+调出输入受理单号: 'xpath==/html/body/div[33]/div[2]/div/div/div[2]/form/div/div[4]/div/input'
+调出更多确定: 'xpath==/html/body/div[33]/div[2]/div/div/div[3]/div/button[1]'
+调出获取状态: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/table/tbody/tr/td[2]/div/span'
+调出获取单号: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[6]/div/span'

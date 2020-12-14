@@ -30,11 +30,56 @@ class Loginpage(WebPage):
     def mouse_stop1(self):
         """鼠标悬停当前登录人"""
         self.mouse_stop(login['当前登录人'])
+        sleep(2)
 
     def click_loginOut(self):
         """退出登录"""
         self.is_click(login['退出登录'])
         sleep(2)
+
+    def click_shopName(self):
+        """点击门店"""
+        self.is_click(login['点击门店'])
+        sleep()
+
+    def input_shopName(self, content):
+        """输入门店名称"""
+        self.input_text(login['输入门店名称'], txt=content)
+
+    def click_loginSearch(self):
+        """点击查询"""
+        self.is_click(login['点击查询'])
+        sleep(2)
+
+    def click_selectShop(self):
+        """选择门店"""
+        self.is_click(login['选择门店'])
+        sleep()
+
+    def click_shopSure(self):
+        """点击确定"""
+        self.is_click(login['点击确定'])
+        sleep(3)
+
+    def input_shopName1(self, content):
+        """输入门店名称"""
+        self.input_text(login['输入门店名称1'], txt=content)
+
+    def click_loginSearch1(self):
+        """点击查询"""
+        self.is_click(login['点击查询1'])
+        sleep(2)
+
+    def click_selectShop1(self):
+        """选择门店"""
+        self.is_click(login['选择门店1'])
+        sleep()
+
+    def click_shopSure1(self):
+        """点击确定"""
+        self.is_click(login['点击确定1'])
+        sleep(3)
+
 
 
 if __name__ == '__main__':

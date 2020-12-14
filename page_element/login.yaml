@@ -7,6 +7,18 @@
 当前登录人: 'xpath==//*[@id="routes"]/div[2]/div[1]/div/div/div[1]/div/div[1]/span[2]'
 退出登录: 'css==.user-avator-dropdown .ivu-dropdown-item:nth-child(2)'
 
+点击门店: 'xpath==//*[@id="routes"]/div[2]/div[1]/div/div/div[3]/div/a[2]'
+输入门店名称: 'xpath==/html/body/div[7]/div[2]/div/div/div/header/div/input'
+点击查询: 'xpath==/html/body/div[7]/div[2]/div/div/div/header/button[1]'
+选择门店: 'xpath==/html/body/div[7]/div[2]/div/div/div/div/div/div[2]/div[2]/table/tbody/tr/td[1]/div/span'
+点击确定: 'xpath==/html/body/div[7]/div[2]/div/div/div/header/button[2]'
+
+
+输入门店名称1: 'xpath==/html/body/div[6]/div[2]/div/div/div/header/div/input'
+点击查询1: 'xpath==/html/body/div[6]/div[2]/div/div/div/header/button[1]'
+选择门店1: 'xpath==/html/body/div[6]/div[2]/div/div/div/div/div/div[2]/div[2]/table/tbody/tr/td[1]/div/span'
+点击确定1: 'xpath==/html/body/div[6]/div[2]/div/div/div/header/button[2]'
+
 
 
 
