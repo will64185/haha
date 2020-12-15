@@ -23,5 +23,4 @@ def send_report():
 
 
 if __name__ == "__main__":
-    '''请先在config/conf.py文件设置QQ邮箱的账号和密码'''
     send_report()

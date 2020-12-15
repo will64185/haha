@@ -85,12 +85,11 @@ WMS确认差异确定: 'xpath==/html/body/div[10]/div[2]/div/div/div/div/div[3]/
 点击确定: 'xpath==/html/body/div[15]/div[2]/div/div/div/div/div[3]/button[2]'
 获取出库单号: 'xpath==//*[@id="right-content"]/div/section[2]/div/div/div[2]/table/tbody/tr/td[3]/div/a'
 获取业务单号: 'xpath==//*[@id="right-content"]/div/section[2]/div/div/div[2]/table/tbody/tr/td[13]/div/span'
-出库差异: 'xpath==//*[@id="leftInner"]/ul/li[3]/ul/li[6]/div'
+出库差异: 'xpath==//*[@id="leftInner"]/ul/li[3]/ul/li[6]/div/span[2]'
 输入出库单号: 'xpath==//*[@id="right-content"]/div/section[1]/div/div/div[4]/div[2]/input'
 点击查询: 'xpath==//*[@id="right-content"]/div/section[1]/div/div/div[4]/button'
 确认差异: 'xpath==//*[@id="right-content"]/div/section[2]/div/div/div[2]/table/tbody/tr/td[2]/div/span/span[1]'
-确认差异确定: 'xpath==/html/body/div[10]/div[2]/div/div/div/div/div[3]/button[2]'
-
+确认差异确定: 'xpath==/html/body/div[14]/div[2]/div/div/div/div/div[3]/button[2]'
 
 
 

@@ -124,9 +124,18 @@ class allotpage(WebPage):
         """调出更多"""
         self.is_click(allot['调出更多'])
 
-    def input_allotApplyOn(self, content):
+    def input_allotOutOn(self, content):
         """调出输入受理单号"""
         self.input_text(allot['调出输入受理单号'], txt=content)
+
+    def click_allotOutMoreSUre1(self):
+        """调出更多确定1"""
+        self.is_click(allot['调出更多确定1'])
+        sleep(3)
+
+    def input_allotApplyOn(self, content):
+        """调出输入申请单号"""
+        self.input_text(allot['调出输入申请单号'], txt=content)
 
     def click_allotOutMoreSUre(self):
         """调出更多确定"""
@@ -142,6 +151,20 @@ class allotpage(WebPage):
         """调出获取单号"""
         allot_outOrderOn = self.element_text(allot['调出获取单号'])
         return allot_outOrderOn
+
+    def click_allotOutOrder(self):
+        """调出点击调拨出库单"""
+        self.is_click(allot['调出点击调拨出库单'])
+        sleep()
+
+    def allot_allotOutCancelNum(self):
+        """调出获取取消数量"""
+        allot_allotOutCancelNum = self.element_text(allot['调出获取取消数量'])
+        return allot_allotOutCancelNum
+
+
+
+
 
 if __name__ == '__main__':
     pass

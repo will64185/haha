@@ -359,6 +359,7 @@ class wmspage(WebPage):
     def click_outDifference(self):
         """出库差异"""
         self.is_click(wms['出库差异'])
+        sleep(2)
 
     def input_outOrderNo(self, content):
         """输入出库单号"""
@@ -367,12 +368,15 @@ class wmspage(WebPage):
     def click_outDifferenceSearch(self):
         """点击查询"""
         self.is_click(wms['点击查询'])
+        sleep()
 
     def click_DifferenceSure(self):
         """确认差异"""
         self.is_click(wms['确认差异'])
+        sleep()
 
     def click_DifferenceSureButton(self):
         """确认差异确定"""
         self.is_click(wms['确认差异确定'])
+        sleep(3)
 

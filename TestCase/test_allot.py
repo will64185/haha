@@ -108,10 +108,10 @@ class TestAllot:
         else:
             print("异常")
 
-    @allure.story("调拨申请")
-    @allure.title("调拨申请，门店向总部调拨，受理后，wms部分发货并回传oms")
+    @allure.story("调拨出库")
+    @allure.title("总部调拨出库，wms部分发货并回传oms")
     def test_002(self, drivers):
-        """调拨申请，门店向总部调拨，非紧俏品,提交后，总部自动受理,wms出库后回传oms"""
+        """总部调拨出库，wms部分发货并回传oms"""
         AllotPage = allotpage(drivers)
         StockPage = stockpage(drivers)
         LoginPage = Loginpage(drivers)
@@ -190,8 +190,8 @@ class TestAllot:
         # AllotPage.click_allotdan()
         AllotPage.click_allotOut()
         AllotPage.click_allotOutMore()
-        AllotPage.input_allotApplyOn(allot_outOrderOn)
-        AllotPage.click_allotOutMoreSUre()
+        AllotPage.input_allotOutOn(allot_outOrderOn)
+        AllotPage.click_allotOutMoreSUre1()
         allot_allotStatus = AllotPage.allot_allotStatus()
         qty = int(stock_qty_before) - int(stock_qty_after)
 
@@ -200,6 +200,44 @@ class TestAllot:
             print('1，调拨出库单' + allot_outOrderOn, 'wms成功出库并回传oms，出库数量为4')
         else:
             print('1.调拨出库单，出库失败')
+
+    @allure.story("调拨出库")
+    @allure.title("总部调拨出库，wms部分发货后确认差异")
+    def test_003(self, drivers):
+        """总部调拨出库，wms部分发货后确认差异"""
+        AllotPage = allotpage(drivers)
+        StockPage = stockpage(drivers)
+        WMSPage = wmspage(drivers)
+        AllotPage.click_allotOutOrder()
+        allot_allotOutCancelNum_before = AllotPage.allot_allotOutCancelNum()
+        StockPage.click_stcoksearch()
+        StockPage.click_stcoksearch1()
+        stock_outQty_before = StockPage.stock_outQty()
+        AllotPage.skip_second()
+        wms_outOrderNo = WMSPage.wms_outOrderNo()
+        wms_YewuNo = WMSPage.wms_YewuNo()
+        WMSPage.click_outDifference()
+        WMSPage.input_outOrderNo(wms_outOrderNo)
+        WMSPage.click_outDifferenceSearch()
+        WMSPage.click_DifferenceSure()
+        WMSPage.click_DifferenceSureButton()
+        AllotPage.skip_first()
+        StockPage.click_stcoksearch1()
+        stock_outQty_after = StockPage.stock_outQty()
+        AllotPage.click_allotOut()
+        AllotPage.click_allotOutMore()
+        AllotPage.input_allotOutOn(wms_YewuNo)
+        AllotPage.click_allotOutMoreSUre1()
+        allot_allotStatus = AllotPage.allot_allotStatus()
+        AllotPage.click_allotOutOrder()
+        allot_allotOutCancelNum_after = AllotPage.allot_allotOutCancelNum()
+        allotOutCancelNum = int(allot_allotOutCancelNum_after) - int(allot_allotOutCancelNum_before)
+        outQty = int(stock_outQty_after) - int(stock_outQty_before)
+        assert ('已完成' in allot_allotStatus and allotOutCancelNum == 1 and outQty == 1)
+        if '已完成' in allot_allotStatus:
+            print('1，调拨出库单' + wms_YewuNo, 'wms确认差异成功')
+        else:
+            print('1.调拨出库单，确认差异失败')
 
 
 if __name__ == '__main__':

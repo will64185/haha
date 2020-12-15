@@ -26,7 +26,12 @@
 # 调拨出库
 调出调拨出库: 'xpath==//*[@id="leftInner"]/ul/li[4]/ul/li[1]/ul/li[3]/div'
 调出更多: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[1]/div/div/div[2]/button'
-调出输入受理单号: 'xpath==/html/body/div[33]/div[2]/div/div/div[2]/form/div/div[4]/div/input'
+调出输入受理单号: 'xpath==/html/body/div[40]/div[2]/div/div/div[2]/form/div/div[4]/div/input'
+调出更多确定1: 'xpath==/html/body/div[40]/div[2]/div/div/div[3]/div/button[1]'
+调出输入申请单号: 'xpath==/html/body/div[33]/div[2]/div/div/div[2]/form/div/div[5]/div/input'
 调出更多确定: 'xpath==/html/body/div[33]/div[2]/div/div/div[3]/div/button[1]'
-调出获取状态: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/table/tbody/tr/td[2]/div/span'
+调出获取状态: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[2]/div/span'
 调出获取单号: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[6]/div/span'
+调出点击调拨出库单: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/table/tbody/tr/td[1]/div/span'
+调出获取取消数量: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/main/div[1]/section[2]/div/div/div/div/div[3]/div/div[4]/div[2]/div[2]/table/tbody/tr/td[17]/div/span'
+

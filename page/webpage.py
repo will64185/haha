@@ -8,10 +8,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains  # 引入 ActionChains 类
+from selenium.webdriver.common.keys import Keys
 from config.conf import cm
 from utils.times import sleep
 from utils.logger import log
 from common.read_excel import ReadExcel
+
 from selenium import webdriver
 import os
 
@@ -145,6 +147,9 @@ class WebPage(object):
 
     def close_web(self):
         self.driver.quit()
+
+    def key_enter(self):
+        self.driver.send_keys(Keys.ENTER)
 
 
 if __name__ == "__main__":
