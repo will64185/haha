@@ -26,5 +26,5 @@ class Element(object):
 
 
 if __name__ == '__main__':
-    search = Element('pchs')
-    print(search['滚动保存'])
+    search = Element('sell')
+    print(search['批次库存'])

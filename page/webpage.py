@@ -148,8 +148,11 @@ class WebPage(object):
     def close_web(self):
         self.driver.quit()
 
-    def key_enter(self):
-        self.driver.send_keys(Keys.ENTER)
+    def key_enter(self, locator):
+
+        ele = self.find_element(locator)
+        ele.send_keys(Keys.ENTER)
+        sleep()
 
 
 if __name__ == "__main__":

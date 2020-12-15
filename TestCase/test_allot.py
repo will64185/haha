@@ -17,7 +17,7 @@ import os
 class TestAllot:
     @pytest.fixture(scope='function', autouse=True)
     def open_oms(self, drivers):
-        """oms2.0,进入采购管理"""
+        """oms2.0,进入调拨管理"""
         # LoginPage = Loginpage(drivers)
         # LoginPage.get_url(ini.url)
         # LoginPage.input_username("h1")
