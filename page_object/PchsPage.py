@@ -146,7 +146,7 @@ class pchspage(WebPage):
     def click_gdskusearch(self):
         """滚动点击查询"""
         self.is_click(search['滚动点击查询'])
-        sleep(2)
+        sleep(3)
 
     def doubleclick_gdsku(self):
         """滚动双击内码"""
@@ -228,6 +228,7 @@ class pchspage(WebPage):
         """计划采购订单"""
         self.is_click(search['计划采购订单'])
         sleep(3)
+
     def click_planadd(self):
         """计划新增"""
         self.is_click(search['计划新增'])
@@ -344,7 +345,7 @@ class pchspage(WebPage):
         self.is_click(search['计划更多确定'])
         sleep()
 
-# 临时采购订单
+    # 临时采购订单
     def click_pchsls(self):
         """临时采购订单"""
         self.is_click(search['临时采购订单'])
@@ -449,13 +450,102 @@ class pchspage(WebPage):
         lspchs_checkNum = self.element_text(search['临时验收数量'])
         return lspchs_checkNum
 
+    # 采购退货
+    def click_pchsReturn(self):
+        """采购退货"""
+        self.is_click(search['采购退货'])
+        sleep(2)
 
+    def click_pchsReturnAdd(self):
+        """采退新增"""
+        self.is_click(search['采退新增'])
+        sleep()
 
+    def input_pchsReturnInputSupplier(self, content):
+        """采退输入供应商"""
+        self.input_text(search['采退输入供应商'], txt=content)
+        sleep(2)
 
+    def enter_pchsReturnInputSupplier(self):
+        """采退输入供应商,回车键"""
+        self.key_enter(search['采退输入供应商'])
+        sleep()
 
+    def click_pchsReturnChooseSupplier(self):
+        """采退选择供应商"""
+        self.is_click(search['采退选择供应商'])
 
+    def click_pchsReturnReason(self):
+        """采退点击退货原因"""
+        self.is_click(search['采退点击退货原因'])
 
+    def click_pchsReturnSelectReason(self):
+        """采退选择退货原因"""
+        self.is_click(search['采退选择退货原因'])
 
+    def click_pchsReturnSku(self):
+        """采退添加配件"""
+        self.is_click(search['采退添加配件'])
+
+    def input_pchsReturnInputPartId(self, content):
+        """采退输入内码"""
+        self.input_text(search['采退输入内码'], txt=content)
+
+    def click_pchsReturnSkuSearch(self):
+        """采退点击查询"""
+        self.is_click(search['采退点击查询'])
+        sleep(2)
+
+    def click_pchsReturnEnterOrder(self):
+        """采退选择采购入库单"""
+        self.is_click(search['采退选择采购入库单'])
+
+    def click_pchsReturnSelectButton(self):
+        """采退点击选择按钮"""
+        self.is_click(search['采退点击选择按钮'])
+        sleep()
+
+    def click_pchsReturnCloseButton(self):
+        """采退关闭添加配件按钮"""
+        self.is_click(search['采退关闭添加配件按钮'])
+
+    def click_pchsReturnSave(self):
+        """采退点击保存按钮"""
+        self.is_click(search['采退点击保存按钮'])
+        sleep()
+
+    def click_pchsReturnCommit(self):
+        """采退点击提交按钮"""
+        self.is_click(search['采退点击提交按钮'])
+
+    def click_pchsReturnCommitSure(self):
+        """采退点击提交确认按钮"""
+        self.is_click(search['采退点击提交确认按钮'])
+        sleep()
+
+    def click_pchsReturnButton(self):
+        """采退点击退货按钮"""
+        self.is_click(search['采退点击退货按钮'])
+
+    def click_pchsReturnSure(self):
+        """采退点击退货确认按钮"""
+        self.is_click(search['采退点击退货确认按钮'])
+        sleep(4)
+
+    def pchsReturn_returnNum(self):
+        """采退获取退货数量"""
+        pchsReturn_returnNum = self.element_text(search['采退获取退货数量'])
+        return pchsReturn_returnNum
+
+    def pchsReturn_status(self):
+        """采退获取采退状态"""
+        pchsReturn_status = self.element_text(search['采退获取采退状态'])
+        return pchsReturn_status
+
+    def pchsReturn_orderno(self):
+        """采退获取采退单号"""
+        pchsReturn_orderno = self.element_text(search['采退获取采退单号'])
+        return pchsReturn_orderno
 
 
 if __name__ == '__main__':

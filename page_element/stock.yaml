@@ -15,4 +15,4 @@
 批次入库日期升序排序: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[3]/div[2]/div/div[3]/div[1]/table/thead/tr/th[3]/div[1]/span[2]/i[1]'
 批次库存: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[3]/div[2]/div/div[2]/div[2]/table/tbody/tr[1]/td[10]/div/span'
 批次可售库存: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[3]/div[2]/div/div[2]/div[2]/table/tbody/tr[1]/td[11]/div/span'
-批次显示零库存: 'xpath==//q'
+批次显示零库存: 'xpath==//*[@id="routes"]/div[2]/div[2]/div/div[2]/div/div/section/div[3]/div[1]/div/label/span/input'

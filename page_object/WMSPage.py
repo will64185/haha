@@ -293,7 +293,7 @@ class wmspage(WebPage):
     def click_oneKeyPacking(self):
         """点击一键装箱"""
         self.is_click(wms['点击一键装箱'])
-        sleep()
+        sleep(3)
 
     def click_packingOver(self):
         """点击拣货完成"""

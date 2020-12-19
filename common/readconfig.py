@@ -5,6 +5,8 @@ from config.conf import cm
 
 HOST = 'HOST'
 WMS = 'WMS'
+ADRESS = 'ADRESS'
+
 
 class ReadConfig(object):
     """配置文件"""
@@ -31,8 +33,12 @@ class ReadConfig(object):
     def wms_url(self):
         return self._get(HOST, WMS)
 
+    @property
+    def ADRESS(self):
+        return self._get(HOST, ADRESS)
+
 
 ini = ReadConfig()
 
 if __name__ == '__main__':
-    print(ini.wms_url)
+    print(ini.ADRESS)

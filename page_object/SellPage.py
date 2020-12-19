@@ -30,6 +30,7 @@ class Sellpage(WebPage):
     def enter_guest(self):
         """销售输入客户,回车键"""
         self.key_enter(sell['销售输入客户'])
+        sleep()
 
     def click_sellSelectGuest(self):
         """销售选择客户"""
@@ -111,6 +112,7 @@ class Sellpage(WebPage):
     def input_batchCode(self, content):
         """批次输入编码"""
         self.input_text(sell['批次输入编码'], txt=content)
+        sleep(2)
 
     def click_batchSkuSearch(self):
         """批次查询"""
@@ -134,3 +136,125 @@ class Sellpage(WebPage):
     def input_batchSkuNum(self, content):
         """批次数量"""
         self.input_text(sell['批次数量'], txt=content)
+
+    def click_enterOrder(self):
+        """选择入库单"""
+        self.is_click(sell['选择入库单'])
+        sleep()
+
+    def click_outEnterOrder(self):
+        """选择出库的入库单"""
+        self.is_click(sell['选择出库的入库单'])
+        sleep(2)
+
+    def click_selectEnterOrder(self):
+        """入库单选入"""
+        self.is_click(sell['入库单选入'])
+        sleep()
+
+    def click_enterOrderCost(self):
+        """按入库成本取值"""
+        self.is_click(sell['按入库成本取值'])
+        sleep()
+
+    def click_outNum(self):
+        """点击出库数量"""
+        self.is_click(sell['点击出库数量'])
+        sleep()
+
+    def input_outNum(self, content):
+        """输入出库数量"""
+        self.input_text(sell['输入出库数量'], txt=content)
+        sleep(2)
+
+    # 销售退货
+    def click_salesReturns(self):
+        """销售退货"""
+        self.is_click(sell['销售退货'])
+        sleep()
+
+    def salesReturnsAdd(self):
+        """销退新增"""
+        self.is_click(sell['销退新增'])
+        sleep()
+
+    def input_salesReturnsGuest(self, content):
+        """销退输入客户"""
+        self.input_text(sell['销退输入客户'], txt=content)
+        sleep(2)
+
+    def enter_salesReturnsGuest(self):
+        """销退输入客户,回车键"""
+        self.key_enter(sell['销退输入客户'])
+        sleep()
+
+    def click_salesReturnsGuest(self):
+        """销退选择客户"""
+        self.is_click(sell['销退选择客户'])
+
+    def click_salesReturnsReason(self):
+        """销退点击退货原因"""
+        self.is_click(sell['销退点击退货原因'])
+
+    def click_salesReturnsChooseReason(self):
+        """销退选择退货原因"""
+        self.is_click(sell['销退选择退货原因'])
+
+    def click_salesReturnsAddSku(self):
+        """销退添加配件"""
+        self.is_click(sell['销退添加配件'])
+        sleep()
+
+    def input_salesReturnsInputPartId(self, content):
+        """销退输入内码"""
+        self.input_text(sell['销退输入内码'], txt=content)
+
+    def click_salesReturnsSearch(self):
+        """销退点击查询"""
+        self.is_click(sell['销退点击查询'])
+        sleep(3)
+
+    def click_salesReturnsSku1(self):
+        """销退选择退货配件1"""
+        self.is_click(sell['销退选择退货配件1'])
+
+    def click_salesReturnsSku2(self):
+        """销退选择退货配件2"""
+        self.is_click(sell['销退选择退货配件2'])
+
+    def click_salesReturnsSku3(self):
+        """销退选择退货配件3"""
+        self.is_click(sell['销退选择退货配件3'])
+
+    def click_click_salesReturnsChoose(self):
+        """销退点击选择"""
+        self.is_click(sell['销退点击选择'])
+
+    def click_click_salesReturnsClose(self):
+        """销退关闭添加配件弹框"""
+        self.is_click(sell['销退关闭添加配件弹框'])
+
+    def click_click_salesReturnsSave(self):
+        """销退保存"""
+        self.is_click(sell['销退保存'])
+        sleep(2)
+
+    def click_click_salesReturnsCommit(self):
+        """销退点击提交并入库"""
+        self.is_click(sell['销退点击提交并入库'])
+        sleep()
+
+    def click_click_salesReturnsCommitSure(self):
+        """销退点击确定"""
+        self.is_click(sell['销退点击确定'])
+        sleep(3)
+
+    def salesReturns_Status(self):
+        """销退状态"""
+        salesReturns_Status = self.element_text(sell['销退状态'])
+        return salesReturns_Status
+
+    def salesReturns_orderNo(self):
+        """销退单号"""
+        salesReturns_orderNo = self.element_text(sell['销退单号'])
+        return salesReturns_orderNo

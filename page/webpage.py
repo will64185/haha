@@ -12,7 +12,6 @@ from selenium.webdriver.common.keys import Keys
 from config.conf import cm
 from utils.times import sleep
 from utils.logger import log
-from common.read_excel import ReadExcel
 
 from selenium import webdriver
 import os

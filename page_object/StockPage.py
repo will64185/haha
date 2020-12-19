@@ -66,12 +66,12 @@ class stockpage(WebPage):
     def click_batchSkuSearch(self):
         """批次查询"""
         self.is_click(search['批次查询'])
-        sleep(3)
+        sleep(5)
 
     def click_batchSkuDateAscending(self):
         """批次入库日期升序排序"""
         self.is_click(search['批次入库日期升序排序'])
-        sleep(5)
+        sleep(7)
 
     def batchStock_qty(self):
         """批次库存"""
